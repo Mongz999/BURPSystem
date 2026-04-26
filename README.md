@@ -1,4 +1,4 @@
-\# 🍔 BURP! Canteen POS System
+🍔 BURP! Canteen POS System
 
 
 
@@ -10,7 +10,7 @@ A simple Point of Sale (POS) system built using \*\*C# (Windows Forms)\*\* and \
 
 
 
-\## 🎯 Features
+🎯 Features
 
 
 
@@ -40,7 +40,7 @@ A simple Point of Sale (POS) system built using \*\*C# (Windows Forms)\*\* and \
 
 
 
-\## 🧱 Technologies Used
+🧱 Technologies Used
 
 
 
@@ -58,7 +58,7 @@ A simple Point of Sale (POS) system built using \*\*C# (Windows Forms)\*\* and \
 
 
 
-\## 🧪 How to Run
+🧪 How to Run
 
 
 
@@ -90,11 +90,11 @@ CanteenDB.accdb
 
 
 
-\## 🔑 Default Accounts
+🔑 Default Accounts
 
 
 
-\### Admin
+Admin
 
 
 
@@ -104,7 +104,7 @@ Password: admin
 
 
 
-\### User
+User
 
 
 
@@ -116,7 +116,7 @@ Create account using the Register Form
 
 
 
-\## 📌 Notes
+📌 Notes
 
 
 
@@ -144,11 +144,9 @@ Create account using the Register Form
 
 
 
-\## 📢 Disclaimer
+📢 Disclaimer
 
 
 
 This project is created for academic purposes only.
-
-
 
