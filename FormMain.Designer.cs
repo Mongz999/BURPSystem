@@ -32,10 +32,10 @@
             this.paneltop = new System.Windows.Forms.Panel();
             this.lblBalance = new System.Windows.Forms.Label();
             this.lblUsername = new System.Windows.Forms.Label();
-            this.btnTopUp = new System.Windows.Forms.Button();
             this.lblFullName = new System.Windows.Forms.Label();
             this.btnUpload = new System.Windows.Forms.Button();
             this.picProfile = new System.Windows.Forms.PictureBox();
+            this.btnTopUp = new System.Windows.Forms.Button();
             this.lblsearch = new System.Windows.Forms.Label();
             this.lblcategory = new System.Windows.Forms.Label();
             this.txtSearch = new System.Windows.Forms.TextBox();
@@ -50,6 +50,8 @@
             this.txtReceipt = new System.Windows.Forms.TextBox();
             this.lblrcpt = new System.Windows.Forms.Label();
             this.panelchckout = new System.Windows.Forms.Panel();
+            this.txtTopUp = new System.Windows.Forms.TextBox();
+            this.lbltopup = new System.Windows.Forms.Label();
             this.lblChange = new System.Windows.Forms.Label();
             this.lblTotal = new System.Windows.Forms.Label();
             this.lblvat = new System.Windows.Forms.Label();
@@ -77,9 +79,10 @@
             this.btnRemove = new System.Windows.Forms.Button();
             this.printDocReceipt = new System.Drawing.Printing.PrintDocument();
             this.printPreviewReceipt = new System.Windows.Forms.PrintDialog();
-            this.lbltopup = new System.Windows.Forms.Label();
-            this.txtTopUp = new System.Windows.Forms.TextBox();
             this.btnPrint = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.btnHistory = new System.Windows.Forms.Button();
+            this.dgvHistory = new System.Windows.Forms.DataGridView();
             this.paneltop.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picProfile)).BeginInit();
             this.panelMenu.SuspendLayout();
@@ -91,6 +94,8 @@
             this.panelqcatbtns.SuspendLayout();
             this.panelqty.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtQty)).BeginInit();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvHistory)).BeginInit();
             this.SuspendLayout();
             // 
             // lblBurp
@@ -98,7 +103,7 @@
             this.lblBurp.AutoSize = true;
             this.lblBurp.Font = new System.Drawing.Font("Segoe UI", 40F, System.Drawing.FontStyle.Bold);
             this.lblBurp.ForeColor = System.Drawing.Color.Yellow;
-            this.lblBurp.Location = new System.Drawing.Point(99, 0);
+            this.lblBurp.Location = new System.Drawing.Point(66, 0);
             this.lblBurp.Name = "lblBurp";
             this.lblBurp.Size = new System.Drawing.Size(190, 72);
             this.lblBurp.TabIndex = 1;
@@ -116,7 +121,7 @@
             this.paneltop.Dock = System.Windows.Forms.DockStyle.Top;
             this.paneltop.Location = new System.Drawing.Point(0, 0);
             this.paneltop.Name = "paneltop";
-            this.paneltop.Size = new System.Drawing.Size(1226, 80);
+            this.paneltop.Size = new System.Drawing.Size(1371, 80);
             this.paneltop.TabIndex = 2;
             // 
             // lblBalance
@@ -124,7 +129,7 @@
             this.lblBalance.AutoSize = true;
             this.lblBalance.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblBalance.ForeColor = System.Drawing.Color.Yellow;
-            this.lblBalance.Location = new System.Drawing.Point(730, 51);
+            this.lblBalance.Location = new System.Drawing.Point(861, 51);
             this.lblBalance.Name = "lblBalance";
             this.lblBalance.Size = new System.Drawing.Size(0, 21);
             this.lblBalance.TabIndex = 22;
@@ -134,10 +139,40 @@
             this.lblUsername.AutoSize = true;
             this.lblUsername.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblUsername.ForeColor = System.Drawing.SystemColors.Window;
-            this.lblUsername.Location = new System.Drawing.Point(730, 30);
+            this.lblUsername.Location = new System.Drawing.Point(861, 30);
             this.lblUsername.Name = "lblUsername";
             this.lblUsername.Size = new System.Drawing.Size(0, 21);
             this.lblUsername.TabIndex = 21;
+            // 
+            // lblFullName
+            // 
+            this.lblFullName.AutoSize = true;
+            this.lblFullName.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFullName.ForeColor = System.Drawing.SystemColors.Window;
+            this.lblFullName.Location = new System.Drawing.Point(861, 9);
+            this.lblFullName.Name = "lblFullName";
+            this.lblFullName.Size = new System.Drawing.Size(0, 21);
+            this.lblFullName.TabIndex = 5;
+            // 
+            // btnUpload
+            // 
+            this.btnUpload.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUpload.Location = new System.Drawing.Point(1227, 26);
+            this.btnUpload.Name = "btnUpload";
+            this.btnUpload.Size = new System.Drawing.Size(118, 29);
+            this.btnUpload.TabIndex = 4;
+            this.btnUpload.Text = "Upload Photo";
+            this.btnUpload.UseVisualStyleBackColor = true;
+            // 
+            // picProfile
+            // 
+            this.picProfile.BackColor = System.Drawing.SystemColors.Window;
+            this.picProfile.Location = new System.Drawing.Point(755, 12);
+            this.picProfile.Name = "picProfile";
+            this.picProfile.Size = new System.Drawing.Size(100, 50);
+            this.picProfile.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picProfile.TabIndex = 3;
+            this.picProfile.TabStop = false;
             // 
             // btnTopUp
             // 
@@ -151,37 +186,6 @@
             this.btnTopUp.Text = "TOP UP";
             this.btnTopUp.UseVisualStyleBackColor = false;
             this.btnTopUp.Click += new System.EventHandler(this.btnTopUp_Click);
-            // 
-            // lblFullName
-            // 
-            this.lblFullName.AutoSize = true;
-            this.lblFullName.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFullName.ForeColor = System.Drawing.SystemColors.Window;
-            this.lblFullName.Location = new System.Drawing.Point(730, 9);
-            this.lblFullName.Name = "lblFullName";
-            this.lblFullName.Size = new System.Drawing.Size(0, 21);
-            this.lblFullName.TabIndex = 5;
-            // 
-            // btnUpload
-            // 
-            this.btnUpload.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUpload.Location = new System.Drawing.Point(1096, 26);
-            this.btnUpload.Name = "btnUpload";
-            this.btnUpload.Size = new System.Drawing.Size(118, 29);
-            this.btnUpload.TabIndex = 4;
-            this.btnUpload.Text = "Upload Photo";
-            this.btnUpload.UseVisualStyleBackColor = true;
-            this.btnUpload.Click += new System.EventHandler(this.btnUpload_Click);
-            // 
-            // picProfile
-            // 
-            this.picProfile.BackColor = System.Drawing.SystemColors.Window;
-            this.picProfile.Location = new System.Drawing.Point(624, 12);
-            this.picProfile.Name = "picProfile";
-            this.picProfile.Size = new System.Drawing.Size(100, 50);
-            this.picProfile.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picProfile.TabIndex = 3;
-            this.picProfile.TabStop = false;
             // 
             // lblsearch
             // 
@@ -267,9 +271,9 @@
             this.panelCart.BackColor = System.Drawing.Color.Indigo;
             this.panelCart.Controls.Add(this.lblcart);
             this.panelCart.Controls.Add(this.dgvCart);
-            this.panelCart.Location = new System.Drawing.Point(624, 92);
+            this.panelCart.Location = new System.Drawing.Point(768, 124);
             this.panelCart.Name = "panelCart";
-            this.panelCart.Size = new System.Drawing.Size(590, 212);
+            this.panelCart.Size = new System.Drawing.Size(590, 287);
             this.panelCart.TabIndex = 11;
             // 
             // lblcart
@@ -290,7 +294,7 @@
             this.dgvCart.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvCart.Location = new System.Drawing.Point(0, 36);
             this.dgvCart.Name = "dgvCart";
-            this.dgvCart.Size = new System.Drawing.Size(590, 176);
+            this.dgvCart.Size = new System.Drawing.Size(590, 251);
             this.dgvCart.TabIndex = 16;
             // 
             // panelrcpt
@@ -298,9 +302,9 @@
             this.panelrcpt.BackColor = System.Drawing.Color.Indigo;
             this.panelrcpt.Controls.Add(this.txtReceipt);
             this.panelrcpt.Controls.Add(this.lblrcpt);
-            this.panelrcpt.Location = new System.Drawing.Point(12, 481);
+            this.panelrcpt.Location = new System.Drawing.Point(12, 462);
             this.panelrcpt.Name = "panelrcpt";
-            this.panelrcpt.Size = new System.Drawing.Size(590, 218);
+            this.panelrcpt.Size = new System.Drawing.Size(590, 287);
             this.panelrcpt.TabIndex = 12;
             // 
             // txtReceipt
@@ -310,7 +314,7 @@
             this.txtReceipt.Multiline = true;
             this.txtReceipt.Name = "txtReceipt";
             this.txtReceipt.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.txtReceipt.Size = new System.Drawing.Size(590, 187);
+            this.txtReceipt.Size = new System.Drawing.Size(590, 300);
             this.txtReceipt.TabIndex = 17;
             // 
             // lblrcpt
@@ -342,10 +346,28 @@
             this.panelchckout.Controls.Add(this.lbl_total);
             this.panelchckout.Controls.Add(this.lbl_vat);
             this.panelchckout.Controls.Add(this.lblsbtotal);
-            this.panelchckout.Location = new System.Drawing.Point(624, 357);
+            this.panelchckout.Location = new System.Drawing.Point(769, 493);
             this.panelchckout.Name = "panelchckout";
-            this.panelchckout.Size = new System.Drawing.Size(590, 185);
+            this.panelchckout.Size = new System.Drawing.Size(590, 237);
             this.panelchckout.TabIndex = 13;
+            // 
+            // txtTopUp
+            // 
+            this.txtTopUp.Location = new System.Drawing.Point(181, 114);
+            this.txtTopUp.Name = "txtTopUp";
+            this.txtTopUp.Size = new System.Drawing.Size(100, 20);
+            this.txtTopUp.TabIndex = 24;
+            // 
+            // lbltopup
+            // 
+            this.lbltopup.AutoSize = true;
+            this.lbltopup.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.lbltopup.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.lbltopup.Location = new System.Drawing.Point(3, 111);
+            this.lbltopup.Name = "lbltopup";
+            this.lbltopup.Size = new System.Drawing.Size(61, 21);
+            this.lbltopup.TabIndex = 23;
+            this.lbltopup.Text = "Top Up:";
             // 
             // lblChange
             // 
@@ -399,7 +421,7 @@
             this.btnCheckout.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.btnCheckout.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.btnCheckout.ForeColor = System.Drawing.SystemColors.Window;
-            this.btnCheckout.Location = new System.Drawing.Point(331, 30);
+            this.btnCheckout.Location = new System.Drawing.Point(215, 182);
             this.btnCheckout.Name = "btnCheckout";
             this.btnCheckout.Size = new System.Drawing.Size(179, 43);
             this.btnCheckout.TabIndex = 17;
@@ -470,7 +492,7 @@
             this.panelqcatbtns.Controls.Add(this.btnBurger);
             this.panelqcatbtns.Controls.Add(this.btnAll);
             this.panelqcatbtns.Controls.Add(this.lblqcatbtn);
-            this.panelqcatbtns.Location = new System.Drawing.Point(624, 548);
+            this.panelqcatbtns.Location = new System.Drawing.Point(768, 765);
             this.panelqcatbtns.Name = "panelqcatbtns";
             this.panelqcatbtns.Size = new System.Drawing.Size(590, 138);
             this.panelqcatbtns.TabIndex = 14;
@@ -583,15 +605,15 @@
             this.panelqty.BackColor = System.Drawing.SystemColors.Window;
             this.panelqty.Controls.Add(this.txtQty);
             this.panelqty.Controls.Add(this.lblqty);
-            this.panelqty.Location = new System.Drawing.Point(12, 417);
+            this.panelqty.Location = new System.Drawing.Point(12, 418);
             this.panelqty.Name = "panelqty";
-            this.panelqty.Size = new System.Drawing.Size(221, 58);
+            this.panelqty.Size = new System.Drawing.Size(221, 38);
             this.panelqty.TabIndex = 15;
             // 
             // txtQty
             // 
             this.txtQty.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtQty.Location = new System.Drawing.Point(83, 15);
+            this.txtQty.Location = new System.Drawing.Point(83, 6);
             this.txtQty.Minimum = new decimal(new int[] {
             1,
             0,
@@ -611,7 +633,7 @@
             this.lblqty.AutoSize = true;
             this.lblqty.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.lblqty.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.lblqty.Location = new System.Drawing.Point(4, 17);
+            this.lblqty.Location = new System.Drawing.Point(4, 8);
             this.lblqty.Name = "lblqty";
             this.lblqty.Size = new System.Drawing.Size(73, 21);
             this.lblqty.TabIndex = 7;
@@ -622,9 +644,9 @@
             this.btnAdd.BackColor = System.Drawing.Color.ForestGreen;
             this.btnAdd.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold);
             this.btnAdd.ForeColor = System.Drawing.SystemColors.Window;
-            this.btnAdd.Location = new System.Drawing.Point(311, 417);
+            this.btnAdd.Location = new System.Drawing.Point(311, 418);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(229, 58);
+            this.btnAdd.Size = new System.Drawing.Size(229, 38);
             this.btnAdd.TabIndex = 16;
             this.btnAdd.Text = "ADD TO CART";
             this.btnAdd.UseVisualStyleBackColor = false;
@@ -635,7 +657,7 @@
             this.btnRemove.BackColor = System.Drawing.Color.Crimson;
             this.btnRemove.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRemove.ForeColor = System.Drawing.SystemColors.Window;
-            this.btnRemove.Location = new System.Drawing.Point(705, 310);
+            this.btnRemove.Location = new System.Drawing.Point(849, 426);
             this.btnRemove.Name = "btnRemove";
             this.btnRemove.Size = new System.Drawing.Size(179, 41);
             this.btnRemove.TabIndex = 18;
@@ -651,30 +673,12 @@
             // 
             this.printPreviewReceipt.UseEXDialog = true;
             // 
-            // lbltopup
-            // 
-            this.lbltopup.AutoSize = true;
-            this.lbltopup.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.lbltopup.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.lbltopup.Location = new System.Drawing.Point(3, 111);
-            this.lbltopup.Name = "lbltopup";
-            this.lbltopup.Size = new System.Drawing.Size(61, 21);
-            this.lbltopup.TabIndex = 23;
-            this.lbltopup.Text = "Top Up:";
-            // 
-            // txtTopUp
-            // 
-            this.txtTopUp.Location = new System.Drawing.Point(181, 114);
-            this.txtTopUp.Name = "txtTopUp";
-            this.txtTopUp.Size = new System.Drawing.Size(100, 20);
-            this.txtTopUp.TabIndex = 24;
-            // 
             // btnPrint
             // 
             this.btnPrint.BackColor = System.Drawing.Color.DarkOrange;
             this.btnPrint.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPrint.ForeColor = System.Drawing.SystemColors.Window;
-            this.btnPrint.Location = new System.Drawing.Point(955, 310);
+            this.btnPrint.Location = new System.Drawing.Point(1099, 426);
             this.btnPrint.Name = "btnPrint";
             this.btnPrint.Size = new System.Drawing.Size(179, 41);
             this.btnPrint.TabIndex = 19;
@@ -682,12 +686,50 @@
             this.btnPrint.UseVisualStyleBackColor = false;
             this.btnPrint.Click += new System.EventHandler(this.btnPrint_Click);
             // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.Indigo;
+            this.panel1.Controls.Add(this.btnHistory);
+            this.panel1.Controls.Add(this.dgvHistory);
+            this.panel1.Location = new System.Drawing.Point(12, 762);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(590, 287);
+            this.panel1.TabIndex = 20;
+            // 
+            // btnHistory
+            // 
+            this.btnHistory.BackColor = System.Drawing.Color.Crimson;
+            this.btnHistory.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHistory.ForeColor = System.Drawing.SystemColors.Window;
+            this.btnHistory.Location = new System.Drawing.Point(4, 3);
+            this.btnHistory.Name = "btnHistory";
+            this.btnHistory.Size = new System.Drawing.Size(187, 31);
+            this.btnHistory.TabIndex = 21;
+            this.btnHistory.Text = "TRANSACTION HISTORY";
+            this.btnHistory.UseVisualStyleBackColor = false;
+            this.btnHistory.Click += new System.EventHandler(this.btnHistory_Click);
+            // 
+            // dgvHistory
+            // 
+            this.dgvHistory.AllowUserToAddRows = false;
+            this.dgvHistory.AllowUserToDeleteRows = false;
+            this.dgvHistory.AllowUserToResizeRows = false;
+            this.dgvHistory.BackgroundColor = System.Drawing.SystemColors.Window;
+            this.dgvHistory.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvHistory.Location = new System.Drawing.Point(0, 36);
+            this.dgvHistory.Name = "dgvHistory";
+            this.dgvHistory.ReadOnly = true;
+            this.dgvHistory.Size = new System.Drawing.Size(590, 251);
+            this.dgvHistory.TabIndex = 21;
+            this.dgvHistory.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvHistory_CellContentClick);
+            // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.ClientSize = new System.Drawing.Size(1226, 709);
+            this.ClientSize = new System.Drawing.Size(1371, 1061);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnPrint);
             this.Controls.Add(this.btnRemove);
             this.Controls.Add(this.btnAdd);
@@ -725,6 +767,8 @@
             this.panelqty.ResumeLayout(false);
             this.panelqty.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtQty)).EndInit();
+            this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvHistory)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -784,6 +828,9 @@
         private System.Windows.Forms.TextBox txtTopUp;
         private System.Windows.Forms.Label lbltopup;
         private System.Windows.Forms.Button btnPrint;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.DataGridView dgvHistory;
+        private System.Windows.Forms.Button btnHistory;
     }
 }
 

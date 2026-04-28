@@ -23,7 +23,7 @@ namespace BURPSystem
                 @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" + path);
         }
 
-        double subtotal = 0, vat = 0, total = 0, cash = 0, change = 0;
+        double subtotal = 0, vat = 0, total = 0;
 
         // ✅ UPDATED CONSTRUCTOR
         public FormMain(string username, string name, double balance)
@@ -70,6 +70,32 @@ namespace BURPSystem
             dgvProducts.AllowUserToAddRows = false;
             dgvProducts.AllowUserToDeleteRows = false;
             dgvProducts.RowHeadersVisible = false;
+        }
+
+        private void LoadHistory()
+        {
+            try
+            {
+                ConnectDB();
+                conn.Open();
+
+                OleDbDataAdapter da = new OleDbDataAdapter(
+                    "SELECT OrderID, TotalAmount, DateOrdered FROM Orders WHERE Username=? ORDER BY DateOrdered DESC",
+                    conn);
+
+                da.SelectCommand.Parameters.AddWithValue("?", currentUser);
+
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+
+                dgvHistory.DataSource = dt;
+
+                conn.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void MakePictureRound()
@@ -205,10 +231,12 @@ namespace BURPSystem
 
             // SAVE ORDER
             OleDbCommand cmd = new OleDbCommand(
-                "INSERT INTO Orders (TotalAmount, DateOrdered) VALUES (?, ?)", conn);
+                  "INSERT INTO Orders (TotalAmount, DateOrdered, Username) VALUES (?, ?, ?)", conn);
 
             cmd.Parameters.Add("?", OleDbType.Double).Value = total;
             cmd.Parameters.Add("?", OleDbType.Date).Value = DateTime.Now;
+            cmd.Parameters.Add("?", OleDbType.VarChar).Value = currentUser;
+
             cmd.ExecuteNonQuery();
 
             // UPDATE BALANCE
@@ -252,48 +280,48 @@ namespace BURPSystem
         }
 
         private void btnTopUp_Click(object sender, EventArgs e)
-        {
-            double amount;
+{
+    double amount;
 
-            // VALIDATION
-            if (!double.TryParse(txtTopUp.Text, out amount) || amount <= 0)
-            {
-                MessageBox.Show("Enter a valid amount!");
-                txtTopUp.Focus();
-                return;
-            }
+    // VALIDATION
+    if (!double.TryParse(txtTopUp.Text, out amount) || amount <= 0)
+    {
+        MessageBox.Show("Enter a valid amount!");
+        txtTopUp.Focus();
+        return;
+    }
 
-            try
-            {
-                // ADD TO BALANCE
-                userBalance += amount;
+    try
+    {
+        // ADD TO BALANCE
+        userBalance += amount;
 
-                // UPDATE LABEL
-                lblBalance.Text = "₱ " + userBalance.ToString("0.00");
+        // UPDATE LABEL
+        lblBalance.Text = "₱ " + userBalance.ToString("0.00");
 
-                // SAVE TO DATABASE
-                ConnectDB();
-                conn.Open();
+        // SAVE TO DATABASE
+        ConnectDB();
+        conn.Open();
 
-                OleDbCommand cmd = new OleDbCommand(
-                    "UPDATE Users SET Balance=? WHERE Username=?", conn);
+        OleDbCommand cmd = new OleDbCommand(
+            "UPDATE Users SET Balance=? WHERE Username=?", conn);
 
-                cmd.Parameters.AddWithValue("?", userBalance);
-                cmd.Parameters.AddWithValue("?", currentUser);
+        cmd.Parameters.AddWithValue("?", userBalance);
+        cmd.Parameters.AddWithValue("?", currentUser);
 
-                cmd.ExecuteNonQuery();
-                conn.Close();
+        cmd.ExecuteNonQuery();
+        conn.Close();
 
-                MessageBox.Show("Top-up successful!");
+        MessageBox.Show("Top-up successful!");
 
-                // CLEAR INPUT
-                txtTopUp.Clear();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-        }
+        // CLEAR INPUT
+        txtTopUp.Clear();
+    }
+    catch (Exception ex)
+    {
+        MessageBox.Show(ex.Message);
+    }
+}
 
         private void LoadProfile()
         {
@@ -408,6 +436,16 @@ namespace BURPSystem
                 new Font("Arial", 10),
                 Brushes.Black,
                 10, 10);
+        }
+
+        private void btnHistory_Click(object sender, EventArgs e)
+        {
+            LoadHistory();
+        }
+
+        private void dgvHistory_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }
