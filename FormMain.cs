@@ -60,7 +60,7 @@ namespace BURPSystem
             txtQty.Value = 1;
 
             lblSubtotal.Text = "₱ 0.00";
-            lblVAT.Text = "₱ 0.00";
+            lblvat.Text = "₱ 0.00";
             lblTotal.Text = "₱ 0.00";
             lblChange.Text = "₱ 0.00";
 
@@ -167,7 +167,7 @@ namespace BURPSystem
             total = subtotal + vat;
 
             lblSubtotal.Text = "₱ " + subtotal.ToString("0.00");
-            lblVAT.Text = "₱ " + vat.ToString("0.00");
+            lblvat.Text = "₱ " + vat.ToString("0.00");
             lblTotal.Text = "₱ " + total.ToString("0.00");
         }
 
@@ -244,7 +244,7 @@ namespace BURPSystem
             // TOTALS
             txtReceipt.AppendText("\r\n--------------------------\r\n");
             txtReceipt.AppendText("Subtotal: " + lblSubtotal.Text + "\r\n");
-            txtReceipt.AppendText("VAT (12%): " + lblVAT.Text + "\r\n");
+            txtReceipt.AppendText("VAT (12%): " + lblvat.Text + "\r\n");
             txtReceipt.AppendText("TOTAL: " + lblTotal.Text + "\r\n\r\n");
 
             txtReceipt.AppendText("Remaining Balance: ₱ " + userBalance.ToString("0.00") + "\r\n");
@@ -384,7 +384,7 @@ namespace BURPSystem
 
             receipt += "\n---------------------------\n";
             receipt += "Subtotal: " + lblSubtotal.Text + "\n";
-            receipt += "VAT: " + lblVAT.Text + "\n";
+            receipt += "VAT: " + lblvat.Text + "\n";
             receipt += "TOTAL: " + lblTotal.Text + "\n\n";
             receipt += "Thank you!\n";
 

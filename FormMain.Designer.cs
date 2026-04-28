@@ -28,95 +28,95 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.lblBurp = new System.Windows.Forms.Label();
+            this.paneltop = new System.Windows.Forms.Panel();
             this.lblBalance = new System.Windows.Forms.Label();
             this.lblUsername = new System.Windows.Forms.Label();
             this.btnTopUp = new System.Windows.Forms.Button();
             this.lblFullName = new System.Windows.Forms.Label();
             this.btnUpload = new System.Windows.Forms.Button();
             this.picProfile = new System.Windows.Forms.PictureBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
+            this.lblsearch = new System.Windows.Forms.Label();
+            this.lblcategory = new System.Windows.Forms.Label();
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.cmbCategory = new System.Windows.Forms.ComboBox();
             this.panelMenu = new System.Windows.Forms.Panel();
-            this.label5 = new System.Windows.Forms.Label();
+            this.lblmenu = new System.Windows.Forms.Label();
             this.dgvProducts = new System.Windows.Forms.DataGridView();
             this.panelCart = new System.Windows.Forms.Panel();
-            this.label6 = new System.Windows.Forms.Label();
+            this.lblcart = new System.Windows.Forms.Label();
             this.dgvCart = new System.Windows.Forms.DataGridView();
-            this.panel3 = new System.Windows.Forms.Panel();
+            this.panelrcpt = new System.Windows.Forms.Panel();
             this.txtReceipt = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.panel4 = new System.Windows.Forms.Panel();
+            this.lblrcpt = new System.Windows.Forms.Label();
+            this.panelchckout = new System.Windows.Forms.Panel();
             this.lblChange = new System.Windows.Forms.Label();
             this.lblTotal = new System.Windows.Forms.Label();
-            this.lblVAT = new System.Windows.Forms.Label();
+            this.lblvat = new System.Windows.Forms.Label();
             this.lblSubtotal = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
+            this.lbl_cash = new System.Windows.Forms.Label();
             this.btnCheckout = new System.Windows.Forms.Button();
             this.txtCash = new System.Windows.Forms.TextBox();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.panel5 = new System.Windows.Forms.Panel();
+            this.lbl_change = new System.Windows.Forms.Label();
+            this.lbl_total = new System.Windows.Forms.Label();
+            this.lbl_vat = new System.Windows.Forms.Label();
+            this.lblsbtotal = new System.Windows.Forms.Label();
+            this.panelqcatbtns = new System.Windows.Forms.Panel();
             this.btnDrinks = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
             this.btnNoodles = new System.Windows.Forms.Button();
+            this.btnSlides = new System.Windows.Forms.Button();
             this.btnSandwiches = new System.Windows.Forms.Button();
             this.btnHotdog = new System.Windows.Forms.Button();
             this.btnBurger = new System.Windows.Forms.Button();
             this.btnAll = new System.Windows.Forms.Button();
-            this.label8 = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
+            this.lblqcatbtn = new System.Windows.Forms.Label();
+            this.panelqty = new System.Windows.Forms.Panel();
             this.txtQty = new System.Windows.Forms.NumericUpDown();
-            this.label9 = new System.Windows.Forms.Label();
+            this.lblqty = new System.Windows.Forms.Label();
             this.btnAdd = new System.Windows.Forms.Button();
             this.btnRemove = new System.Windows.Forms.Button();
             this.btnPrint = new System.Windows.Forms.Button();
             this.printDocReceipt = new System.Drawing.Printing.PrintDocument();
             this.printPreviewReceipt = new System.Windows.Forms.PrintDialog();
-            this.panel1.SuspendLayout();
+            this.paneltop.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picProfile)).BeginInit();
             this.panelMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProducts)).BeginInit();
             this.panelCart.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCart)).BeginInit();
-            this.panel3.SuspendLayout();
-            this.panel4.SuspendLayout();
-            this.panel5.SuspendLayout();
-            this.panel2.SuspendLayout();
+            this.panelrcpt.SuspendLayout();
+            this.panelchckout.SuspendLayout();
+            this.panelqcatbtns.SuspendLayout();
+            this.panelqty.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtQty)).BeginInit();
             this.SuspendLayout();
             // 
-            // label1
+            // lblBurp
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 40F, System.Drawing.FontStyle.Bold);
-            this.label1.ForeColor = System.Drawing.Color.Yellow;
-            this.label1.Location = new System.Drawing.Point(99, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(190, 72);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "BURP!";
+            this.lblBurp.AutoSize = true;
+            this.lblBurp.Font = new System.Drawing.Font("Segoe UI", 40F, System.Drawing.FontStyle.Bold);
+            this.lblBurp.ForeColor = System.Drawing.Color.Yellow;
+            this.lblBurp.Location = new System.Drawing.Point(99, 0);
+            this.lblBurp.Name = "lblBurp";
+            this.lblBurp.Size = new System.Drawing.Size(190, 72);
+            this.lblBurp.TabIndex = 1;
+            this.lblBurp.Text = "BURP!";
             // 
-            // panel1
+            // paneltop
             // 
-            this.panel1.BackColor = System.Drawing.Color.Indigo;
-            this.panel1.Controls.Add(this.lblBalance);
-            this.panel1.Controls.Add(this.lblUsername);
-            this.panel1.Controls.Add(this.btnTopUp);
-            this.panel1.Controls.Add(this.lblFullName);
-            this.panel1.Controls.Add(this.btnUpload);
-            this.panel1.Controls.Add(this.picProfile);
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1226, 80);
-            this.panel1.TabIndex = 2;
+            this.paneltop.BackColor = System.Drawing.Color.Indigo;
+            this.paneltop.Controls.Add(this.lblBalance);
+            this.paneltop.Controls.Add(this.lblUsername);
+            this.paneltop.Controls.Add(this.btnTopUp);
+            this.paneltop.Controls.Add(this.lblFullName);
+            this.paneltop.Controls.Add(this.btnUpload);
+            this.paneltop.Controls.Add(this.picProfile);
+            this.paneltop.Controls.Add(this.lblBurp);
+            this.paneltop.Dock = System.Windows.Forms.DockStyle.Top;
+            this.paneltop.Location = new System.Drawing.Point(0, 0);
+            this.paneltop.Name = "paneltop";
+            this.paneltop.Size = new System.Drawing.Size(1226, 80);
+            this.paneltop.TabIndex = 2;
             // 
             // lblBalance
             // 
@@ -182,27 +182,27 @@
             this.picProfile.TabIndex = 3;
             this.picProfile.TabStop = false;
             // 
-            // label3
+            // lblsearch
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.label3.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label3.Location = new System.Drawing.Point(12, 92);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(60, 21);
-            this.label3.TabIndex = 6;
-            this.label3.Text = "Search:";
+            this.lblsearch.AutoSize = true;
+            this.lblsearch.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.lblsearch.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.lblsearch.Location = new System.Drawing.Point(12, 92);
+            this.lblsearch.Name = "lblsearch";
+            this.lblsearch.Size = new System.Drawing.Size(60, 21);
+            this.lblsearch.TabIndex = 6;
+            this.lblsearch.Text = "Search:";
             // 
-            // label4
+            // lblcategory
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.label4.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label4.Location = new System.Drawing.Point(307, 92);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(76, 21);
-            this.label4.TabIndex = 7;
-            this.label4.Text = "Category:";
+            this.lblcategory.AutoSize = true;
+            this.lblcategory.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.lblcategory.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.lblcategory.Location = new System.Drawing.Point(307, 92);
+            this.lblcategory.Name = "lblcategory";
+            this.lblcategory.Size = new System.Drawing.Size(76, 21);
+            this.lblcategory.TabIndex = 7;
+            this.lblcategory.Text = "Category:";
             // 
             // txtSearch
             // 
@@ -229,24 +229,24 @@
             // panelMenu
             // 
             this.panelMenu.BackColor = System.Drawing.Color.Indigo;
-            this.panelMenu.Controls.Add(this.label5);
+            this.panelMenu.Controls.Add(this.lblmenu);
             this.panelMenu.Controls.Add(this.dgvProducts);
             this.panelMenu.Location = new System.Drawing.Point(12, 124);
             this.panelMenu.Name = "panelMenu";
             this.panelMenu.Size = new System.Drawing.Size(590, 287);
             this.panelMenu.TabIndex = 10;
             // 
-            // label5
+            // lblmenu
             // 
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.Indigo;
-            this.label5.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.SystemColors.Window;
-            this.label5.Location = new System.Drawing.Point(3, 5);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(72, 28);
-            this.label5.TabIndex = 16;
-            this.label5.Text = "MENU";
+            this.lblmenu.AutoSize = true;
+            this.lblmenu.BackColor = System.Drawing.Color.Indigo;
+            this.lblmenu.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblmenu.ForeColor = System.Drawing.SystemColors.Window;
+            this.lblmenu.Location = new System.Drawing.Point(3, 5);
+            this.lblmenu.Name = "lblmenu";
+            this.lblmenu.Size = new System.Drawing.Size(72, 28);
+            this.lblmenu.TabIndex = 16;
+            this.lblmenu.Text = "MENU";
             // 
             // dgvProducts
             // 
@@ -264,24 +264,24 @@
             // panelCart
             // 
             this.panelCart.BackColor = System.Drawing.Color.Indigo;
-            this.panelCart.Controls.Add(this.label6);
+            this.panelCart.Controls.Add(this.lblcart);
             this.panelCart.Controls.Add(this.dgvCart);
-            this.panelCart.Location = new System.Drawing.Point(624, 124);
+            this.panelCart.Location = new System.Drawing.Point(624, 92);
             this.panelCart.Name = "panelCart";
             this.panelCart.Size = new System.Drawing.Size(590, 212);
             this.panelCart.TabIndex = 11;
             // 
-            // label6
+            // lblcart
             // 
-            this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.Color.Indigo;
-            this.label6.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.SystemColors.Window;
-            this.label6.Location = new System.Drawing.Point(3, 5);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(63, 28);
-            this.label6.TabIndex = 17;
-            this.label6.Text = "CART";
+            this.lblcart.AutoSize = true;
+            this.lblcart.BackColor = System.Drawing.Color.Indigo;
+            this.lblcart.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblcart.ForeColor = System.Drawing.SystemColors.Window;
+            this.lblcart.Location = new System.Drawing.Point(3, 5);
+            this.lblcart.Name = "lblcart";
+            this.lblcart.Size = new System.Drawing.Size(63, 28);
+            this.lblcart.TabIndex = 17;
+            this.lblcart.Text = "CART";
             // 
             // dgvCart
             // 
@@ -292,15 +292,15 @@
             this.dgvCart.Size = new System.Drawing.Size(590, 176);
             this.dgvCart.TabIndex = 16;
             // 
-            // panel3
+            // panelrcpt
             // 
-            this.panel3.BackColor = System.Drawing.Color.Indigo;
-            this.panel3.Controls.Add(this.txtReceipt);
-            this.panel3.Controls.Add(this.label7);
-            this.panel3.Location = new System.Drawing.Point(12, 481);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(590, 218);
-            this.panel3.TabIndex = 12;
+            this.panelrcpt.BackColor = System.Drawing.Color.Indigo;
+            this.panelrcpt.Controls.Add(this.txtReceipt);
+            this.panelrcpt.Controls.Add(this.lblrcpt);
+            this.panelrcpt.Location = new System.Drawing.Point(12, 481);
+            this.panelrcpt.Name = "panelrcpt";
+            this.panelrcpt.Size = new System.Drawing.Size(590, 218);
+            this.panelrcpt.TabIndex = 12;
             // 
             // txtReceipt
             // 
@@ -312,36 +312,36 @@
             this.txtReceipt.Size = new System.Drawing.Size(590, 187);
             this.txtReceipt.TabIndex = 17;
             // 
-            // label7
+            // lblrcpt
             // 
-            this.label7.AutoSize = true;
-            this.label7.BackColor = System.Drawing.Color.Indigo;
-            this.label7.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.SystemColors.Window;
-            this.label7.Location = new System.Drawing.Point(3, 0);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(89, 28);
-            this.label7.TabIndex = 17;
-            this.label7.Text = "RECEIPT";
+            this.lblrcpt.AutoSize = true;
+            this.lblrcpt.BackColor = System.Drawing.Color.Indigo;
+            this.lblrcpt.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblrcpt.ForeColor = System.Drawing.SystemColors.Window;
+            this.lblrcpt.Location = new System.Drawing.Point(3, 0);
+            this.lblrcpt.Name = "lblrcpt";
+            this.lblrcpt.Size = new System.Drawing.Size(89, 28);
+            this.lblrcpt.TabIndex = 17;
+            this.lblrcpt.Text = "RECEIPT";
             // 
-            // panel4
+            // panelchckout
             // 
-            this.panel4.BackColor = System.Drawing.SystemColors.Window;
-            this.panel4.Controls.Add(this.lblChange);
-            this.panel4.Controls.Add(this.lblTotal);
-            this.panel4.Controls.Add(this.lblVAT);
-            this.panel4.Controls.Add(this.lblSubtotal);
-            this.panel4.Controls.Add(this.label13);
-            this.panel4.Controls.Add(this.btnCheckout);
-            this.panel4.Controls.Add(this.txtCash);
-            this.panel4.Controls.Add(this.label14);
-            this.panel4.Controls.Add(this.label12);
-            this.panel4.Controls.Add(this.label11);
-            this.panel4.Controls.Add(this.label10);
-            this.panel4.Location = new System.Drawing.Point(624, 386);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(590, 147);
-            this.panel4.TabIndex = 13;
+            this.panelchckout.BackColor = System.Drawing.SystemColors.Window;
+            this.panelchckout.Controls.Add(this.lblChange);
+            this.panelchckout.Controls.Add(this.lblTotal);
+            this.panelchckout.Controls.Add(this.lblvat);
+            this.panelchckout.Controls.Add(this.lblSubtotal);
+            this.panelchckout.Controls.Add(this.lbl_cash);
+            this.panelchckout.Controls.Add(this.btnCheckout);
+            this.panelchckout.Controls.Add(this.txtCash);
+            this.panelchckout.Controls.Add(this.lbl_change);
+            this.panelchckout.Controls.Add(this.lbl_total);
+            this.panelchckout.Controls.Add(this.lbl_vat);
+            this.panelchckout.Controls.Add(this.lblsbtotal);
+            this.panelchckout.Location = new System.Drawing.Point(624, 357);
+            this.panelchckout.Name = "panelchckout";
+            this.panelchckout.Size = new System.Drawing.Size(590, 185);
+            this.panelchckout.TabIndex = 13;
             // 
             // lblChange
             // 
@@ -361,14 +361,14 @@
             this.lblTotal.Size = new System.Drawing.Size(0, 21);
             this.lblTotal.TabIndex = 21;
             // 
-            // lblVAT
+            // lblvat
             // 
-            this.lblVAT.AutoSize = true;
-            this.lblVAT.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblVAT.Location = new System.Drawing.Point(220, 30);
-            this.lblVAT.Name = "lblVAT";
-            this.lblVAT.Size = new System.Drawing.Size(0, 21);
-            this.lblVAT.TabIndex = 20;
+            this.lblvat.AutoSize = true;
+            this.lblvat.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblvat.Location = new System.Drawing.Point(220, 30);
+            this.lblvat.Name = "lblvat";
+            this.lblvat.Size = new System.Drawing.Size(0, 21);
+            this.lblvat.TabIndex = 20;
             // 
             // lblSubtotal
             // 
@@ -379,16 +379,16 @@
             this.lblSubtotal.Size = new System.Drawing.Size(0, 21);
             this.lblSubtotal.TabIndex = 19;
             // 
-            // label13
+            // lbl_cash
             // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.label13.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label13.Location = new System.Drawing.Point(3, 83);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(47, 21);
-            this.label13.TabIndex = 18;
-            this.label13.Text = "Cash:";
+            this.lbl_cash.AutoSize = true;
+            this.lbl_cash.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.lbl_cash.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.lbl_cash.Location = new System.Drawing.Point(3, 83);
+            this.lbl_cash.Name = "lbl_cash";
+            this.lbl_cash.Size = new System.Drawing.Size(47, 21);
+            this.lbl_cash.TabIndex = 18;
+            this.lbl_cash.Text = "Cash:";
             // 
             // btnCheckout
             // 
@@ -410,66 +410,66 @@
             this.txtCash.Size = new System.Drawing.Size(100, 20);
             this.txtCash.TabIndex = 11;
             // 
-            // label14
+            // lbl_change
             // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.label14.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label14.Location = new System.Drawing.Point(3, 117);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(66, 21);
-            this.label14.TabIndex = 10;
-            this.label14.Text = "Change:";
+            this.lbl_change.AutoSize = true;
+            this.lbl_change.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.lbl_change.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.lbl_change.Location = new System.Drawing.Point(3, 117);
+            this.lbl_change.Name = "lbl_change";
+            this.lbl_change.Size = new System.Drawing.Size(66, 21);
+            this.lbl_change.TabIndex = 10;
+            this.lbl_change.Text = "Change:";
             // 
-            // label12
+            // lbl_total
             // 
-            this.label12.AutoSize = true;
-            this.label12.BackColor = System.Drawing.SystemColors.Window;
-            this.label12.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.ForeColor = System.Drawing.Color.Red;
-            this.label12.Location = new System.Drawing.Point(4, 62);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(60, 21);
-            this.label12.TabIndex = 9;
-            this.label12.Text = "TOTAL:";
+            this.lbl_total.AutoSize = true;
+            this.lbl_total.BackColor = System.Drawing.SystemColors.Window;
+            this.lbl_total.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_total.ForeColor = System.Drawing.Color.Red;
+            this.lbl_total.Location = new System.Drawing.Point(4, 62);
+            this.lbl_total.Name = "lbl_total";
+            this.lbl_total.Size = new System.Drawing.Size(60, 21);
+            this.lbl_total.TabIndex = 9;
+            this.lbl_total.Text = "TOTAL:";
             // 
-            // label11
+            // lbl_vat
             // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.label11.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label11.Location = new System.Drawing.Point(3, 30);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(84, 21);
-            this.label11.TabIndex = 8;
-            this.label11.Text = "VAT (12%):";
+            this.lbl_vat.AutoSize = true;
+            this.lbl_vat.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.lbl_vat.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.lbl_vat.Location = new System.Drawing.Point(3, 30);
+            this.lbl_vat.Name = "lbl_vat";
+            this.lbl_vat.Size = new System.Drawing.Size(84, 21);
+            this.lbl_vat.TabIndex = 8;
+            this.lbl_vat.Text = "VAT (12%):";
             // 
-            // label10
+            // lblsbtotal
             // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.label10.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label10.Location = new System.Drawing.Point(3, 9);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(71, 21);
-            this.label10.TabIndex = 7;
-            this.label10.Text = "Subtotal:";
+            this.lblsbtotal.AutoSize = true;
+            this.lblsbtotal.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.lblsbtotal.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.lblsbtotal.Location = new System.Drawing.Point(3, 9);
+            this.lblsbtotal.Name = "lblsbtotal";
+            this.lblsbtotal.Size = new System.Drawing.Size(71, 21);
+            this.lblsbtotal.TabIndex = 7;
+            this.lblsbtotal.Text = "Subtotal:";
             // 
-            // panel5
+            // panelqcatbtns
             // 
-            this.panel5.BackColor = System.Drawing.Color.Indigo;
-            this.panel5.Controls.Add(this.btnDrinks);
-            this.panel5.Controls.Add(this.button6);
-            this.panel5.Controls.Add(this.btnNoodles);
-            this.panel5.Controls.Add(this.btnSandwiches);
-            this.panel5.Controls.Add(this.btnHotdog);
-            this.panel5.Controls.Add(this.btnBurger);
-            this.panel5.Controls.Add(this.btnAll);
-            this.panel5.Controls.Add(this.label8);
-            this.panel5.Location = new System.Drawing.Point(624, 548);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(590, 138);
-            this.panel5.TabIndex = 14;
+            this.panelqcatbtns.BackColor = System.Drawing.Color.Indigo;
+            this.panelqcatbtns.Controls.Add(this.btnDrinks);
+            this.panelqcatbtns.Controls.Add(this.btnNoodles);
+            this.panelqcatbtns.Controls.Add(this.btnSlides);
+            this.panelqcatbtns.Controls.Add(this.btnSandwiches);
+            this.panelqcatbtns.Controls.Add(this.btnHotdog);
+            this.panelqcatbtns.Controls.Add(this.btnBurger);
+            this.panelqcatbtns.Controls.Add(this.btnAll);
+            this.panelqcatbtns.Controls.Add(this.lblqcatbtn);
+            this.panelqcatbtns.Location = new System.Drawing.Point(624, 548);
+            this.panelqcatbtns.Name = "panelqcatbtns";
+            this.panelqcatbtns.Size = new System.Drawing.Size(590, 138);
+            this.panelqcatbtns.TabIndex = 14;
             // 
             // btnDrinks
             // 
@@ -484,31 +484,31 @@
             this.btnDrinks.UseVisualStyleBackColor = false;
             this.btnDrinks.Click += new System.EventHandler(this.btnDrinks_Click);
             // 
-            // button6
-            // 
-            this.button6.BackColor = System.Drawing.Color.Red;
-            this.button6.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.button6.ForeColor = System.Drawing.SystemColors.Window;
-            this.button6.Location = new System.Drawing.Point(226, 85);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(139, 39);
-            this.button6.TabIndex = 23;
-            this.button6.Text = "Noodles";
-            this.button6.UseVisualStyleBackColor = false;
-            this.button6.Click += new System.EventHandler(this.btnNoodles_Click);
-            // 
             // btnNoodles
             // 
-            this.btnNoodles.BackColor = System.Drawing.Color.Crimson;
+            this.btnNoodles.BackColor = System.Drawing.Color.Red;
             this.btnNoodles.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.btnNoodles.ForeColor = System.Drawing.SystemColors.Window;
-            this.btnNoodles.Location = new System.Drawing.Point(81, 85);
+            this.btnNoodles.Location = new System.Drawing.Point(226, 85);
             this.btnNoodles.Name = "btnNoodles";
             this.btnNoodles.Size = new System.Drawing.Size(139, 39);
-            this.btnNoodles.TabIndex = 22;
-            this.btnNoodles.Text = "Sides";
+            this.btnNoodles.TabIndex = 23;
+            this.btnNoodles.Text = "Noodles";
             this.btnNoodles.UseVisualStyleBackColor = false;
-            this.btnNoodles.Click += new System.EventHandler(this.btnSides_Click);
+            this.btnNoodles.Click += new System.EventHandler(this.btnNoodles_Click);
+            // 
+            // btnSlides
+            // 
+            this.btnSlides.BackColor = System.Drawing.Color.Crimson;
+            this.btnSlides.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.btnSlides.ForeColor = System.Drawing.SystemColors.Window;
+            this.btnSlides.Location = new System.Drawing.Point(81, 85);
+            this.btnSlides.Name = "btnSlides";
+            this.btnSlides.Size = new System.Drawing.Size(139, 39);
+            this.btnSlides.TabIndex = 22;
+            this.btnSlides.Text = "Sides";
+            this.btnSlides.UseVisualStyleBackColor = false;
+            this.btnSlides.Click += new System.EventHandler(this.btnSides_Click);
             // 
             // btnSandwiches
             // 
@@ -562,27 +562,27 @@
             this.btnAll.UseVisualStyleBackColor = false;
             this.btnAll.Click += new System.EventHandler(this.btnAll_Click);
             // 
-            // label8
+            // lblqcatbtn
             // 
-            this.label8.AutoSize = true;
-            this.label8.BackColor = System.Drawing.Color.Indigo;
-            this.label8.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.SystemColors.Window;
-            this.label8.Location = new System.Drawing.Point(3, 0);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(278, 28);
-            this.label8.TabIndex = 17;
-            this.label8.Text = "QUICK CATEGORY BUTTONS";
+            this.lblqcatbtn.AutoSize = true;
+            this.lblqcatbtn.BackColor = System.Drawing.Color.Indigo;
+            this.lblqcatbtn.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblqcatbtn.ForeColor = System.Drawing.SystemColors.Window;
+            this.lblqcatbtn.Location = new System.Drawing.Point(3, 0);
+            this.lblqcatbtn.Name = "lblqcatbtn";
+            this.lblqcatbtn.Size = new System.Drawing.Size(278, 28);
+            this.lblqcatbtn.TabIndex = 17;
+            this.lblqcatbtn.Text = "QUICK CATEGORY BUTTONS";
             // 
-            // panel2
+            // panelqty
             // 
-            this.panel2.BackColor = System.Drawing.SystemColors.Window;
-            this.panel2.Controls.Add(this.txtQty);
-            this.panel2.Controls.Add(this.label9);
-            this.panel2.Location = new System.Drawing.Point(12, 417);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(221, 58);
-            this.panel2.TabIndex = 15;
+            this.panelqty.BackColor = System.Drawing.SystemColors.Window;
+            this.panelqty.Controls.Add(this.txtQty);
+            this.panelqty.Controls.Add(this.lblqty);
+            this.panelqty.Location = new System.Drawing.Point(12, 417);
+            this.panelqty.Name = "panelqty";
+            this.panelqty.Size = new System.Drawing.Size(221, 58);
+            this.panelqty.TabIndex = 15;
             // 
             // txtQty
             // 
@@ -602,16 +602,16 @@
             0,
             0});
             // 
-            // label9
+            // lblqty
             // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.label9.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label9.Location = new System.Drawing.Point(4, 17);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(73, 21);
-            this.label9.TabIndex = 7;
-            this.label9.Text = "Quantity:";
+            this.lblqty.AutoSize = true;
+            this.lblqty.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.lblqty.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.lblqty.Location = new System.Drawing.Point(4, 17);
+            this.lblqty.Name = "lblqty";
+            this.lblqty.Size = new System.Drawing.Size(73, 21);
+            this.lblqty.TabIndex = 7;
+            this.lblqty.Text = "Quantity:";
             // 
             // btnAdd
             // 
@@ -631,7 +631,7 @@
             this.btnRemove.BackColor = System.Drawing.Color.Crimson;
             this.btnRemove.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRemove.ForeColor = System.Drawing.SystemColors.Window;
-            this.btnRemove.Location = new System.Drawing.Point(705, 342);
+            this.btnRemove.Location = new System.Drawing.Point(705, 310);
             this.btnRemove.Name = "btnRemove";
             this.btnRemove.Size = new System.Drawing.Size(179, 41);
             this.btnRemove.TabIndex = 18;
@@ -644,7 +644,7 @@
             this.btnPrint.BackColor = System.Drawing.Color.DarkOrange;
             this.btnPrint.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPrint.ForeColor = System.Drawing.SystemColors.Window;
-            this.btnPrint.Location = new System.Drawing.Point(955, 342);
+            this.btnPrint.Location = new System.Drawing.Point(955, 310);
             this.btnPrint.Name = "btnPrint";
             this.btnPrint.Size = new System.Drawing.Size(179, 41);
             this.btnPrint.TabIndex = 19;
@@ -669,24 +669,24 @@
             this.Controls.Add(this.btnPrint);
             this.Controls.Add(this.btnRemove);
             this.Controls.Add(this.btnAdd);
-            this.Controls.Add(this.panel2);
-            this.Controls.Add(this.panel5);
-            this.Controls.Add(this.panel4);
-            this.Controls.Add(this.panel3);
+            this.Controls.Add(this.panelqty);
+            this.Controls.Add(this.panelqcatbtns);
+            this.Controls.Add(this.panelchckout);
+            this.Controls.Add(this.panelrcpt);
             this.Controls.Add(this.panelCart);
             this.Controls.Add(this.panelMenu);
             this.Controls.Add(this.cmbCategory);
             this.Controls.Add(this.txtSearch);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.lblcategory);
+            this.Controls.Add(this.lblsearch);
+            this.Controls.Add(this.paneltop);
             this.MinimizeBox = false;
             this.Name = "FormMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "BURP";
             this.Load += new System.EventHandler(this.FormMain_Load);
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            this.paneltop.ResumeLayout(false);
+            this.paneltop.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picProfile)).EndInit();
             this.panelMenu.ResumeLayout(false);
             this.panelMenu.PerformLayout();
@@ -694,14 +694,14 @@
             this.panelCart.ResumeLayout(false);
             this.panelCart.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCart)).EndInit();
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
-            this.panel4.ResumeLayout(false);
-            this.panel4.PerformLayout();
-            this.panel5.ResumeLayout(false);
-            this.panel5.PerformLayout();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
+            this.panelrcpt.ResumeLayout(false);
+            this.panelrcpt.PerformLayout();
+            this.panelchckout.ResumeLayout(false);
+            this.panelchckout.PerformLayout();
+            this.panelqcatbtns.ResumeLayout(false);
+            this.panelqcatbtns.PerformLayout();
+            this.panelqty.ResumeLayout(false);
+            this.panelqty.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtQty)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -710,48 +710,48 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label lblBurp;
+        private System.Windows.Forms.Panel paneltop;
         private System.Windows.Forms.Label lblFullName;
         private System.Windows.Forms.Button btnUpload;
         private System.Windows.Forms.PictureBox picProfile;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label lblsearch;
+        private System.Windows.Forms.Label lblcategory;
         private System.Windows.Forms.TextBox txtSearch;
         private System.Windows.Forms.ComboBox cmbCategory;
         private System.Windows.Forms.Panel panelMenu;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label lblmenu;
         private System.Windows.Forms.DataGridView dgvProducts;
         private System.Windows.Forms.Panel panelCart;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label lblcart;
         private System.Windows.Forms.DataGridView dgvCart;
-        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Panel panelrcpt;
         private System.Windows.Forms.TextBox txtReceipt;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label lblrcpt;
+        private System.Windows.Forms.Panel panelchckout;
+        private System.Windows.Forms.Label lbl_cash;
         private System.Windows.Forms.Button btnCheckout;
         private System.Windows.Forms.TextBox txtCash;
-        private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Label lbl_change;
+        private System.Windows.Forms.Label lbl_total;
+        private System.Windows.Forms.Label lbl_vat;
+        private System.Windows.Forms.Label lblsbtotal;
+        private System.Windows.Forms.Panel panelqcatbtns;
+        private System.Windows.Forms.Label lblqcatbtn;
+        private System.Windows.Forms.Panel panelqty;
         private System.Windows.Forms.NumericUpDown txtQty;
-        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label lblqty;
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.Label lblChange;
         private System.Windows.Forms.Label lblTotal;
-        private System.Windows.Forms.Label lblVAT;
+        private System.Windows.Forms.Label lblvat;
         private System.Windows.Forms.Label lblSubtotal;
         private System.Windows.Forms.Button btnHotdog;
         private System.Windows.Forms.Button btnBurger;
         private System.Windows.Forms.Button btnAll;
         private System.Windows.Forms.Button btnDrinks;
-        private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button btnNoodles;
+        private System.Windows.Forms.Button btnSlides;
         private System.Windows.Forms.Button btnSandwiches;
         private System.Windows.Forms.Button btnRemove;
         private System.Windows.Forms.Button btnPrint;
