@@ -75,9 +75,11 @@
             this.lblqty = new System.Windows.Forms.Label();
             this.btnAdd = new System.Windows.Forms.Button();
             this.btnRemove = new System.Windows.Forms.Button();
-            this.btnPrint = new System.Windows.Forms.Button();
             this.printDocReceipt = new System.Drawing.Printing.PrintDocument();
             this.printPreviewReceipt = new System.Windows.Forms.PrintDialog();
+            this.lbltopup = new System.Windows.Forms.Label();
+            this.txtTopUp = new System.Windows.Forms.TextBox();
+            this.btnPrint = new System.Windows.Forms.Button();
             this.paneltop.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picProfile)).BeginInit();
             this.panelMenu.SuspendLayout();
@@ -107,7 +109,6 @@
             this.paneltop.BackColor = System.Drawing.Color.Indigo;
             this.paneltop.Controls.Add(this.lblBalance);
             this.paneltop.Controls.Add(this.lblUsername);
-            this.paneltop.Controls.Add(this.btnTopUp);
             this.paneltop.Controls.Add(this.lblFullName);
             this.paneltop.Controls.Add(this.btnUpload);
             this.paneltop.Controls.Add(this.picProfile);
@@ -143,9 +144,9 @@
             this.btnTopUp.BackColor = System.Drawing.Color.Green;
             this.btnTopUp.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTopUp.ForeColor = System.Drawing.SystemColors.Window;
-            this.btnTopUp.Location = new System.Drawing.Point(1096, 43);
+            this.btnTopUp.Location = new System.Drawing.Point(331, 107);
             this.btnTopUp.Name = "btnTopUp";
-            this.btnTopUp.Size = new System.Drawing.Size(118, 29);
+            this.btnTopUp.Size = new System.Drawing.Size(179, 29);
             this.btnTopUp.TabIndex = 20;
             this.btnTopUp.Text = "TOP UP";
             this.btnTopUp.UseVisualStyleBackColor = false;
@@ -164,7 +165,7 @@
             // btnUpload
             // 
             this.btnUpload.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUpload.Location = new System.Drawing.Point(1096, 12);
+            this.btnUpload.Location = new System.Drawing.Point(1096, 26);
             this.btnUpload.Name = "btnUpload";
             this.btnUpload.Size = new System.Drawing.Size(118, 29);
             this.btnUpload.TabIndex = 4;
@@ -327,6 +328,9 @@
             // panelchckout
             // 
             this.panelchckout.BackColor = System.Drawing.SystemColors.Window;
+            this.panelchckout.Controls.Add(this.txtTopUp);
+            this.panelchckout.Controls.Add(this.lbltopup);
+            this.panelchckout.Controls.Add(this.btnTopUp);
             this.panelchckout.Controls.Add(this.lblChange);
             this.panelchckout.Controls.Add(this.lblTotal);
             this.panelchckout.Controls.Add(this.lblvat);
@@ -347,7 +351,7 @@
             // 
             this.lblChange.AutoSize = true;
             this.lblChange.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblChange.Location = new System.Drawing.Point(220, 117);
+            this.lblChange.Location = new System.Drawing.Point(220, 149);
             this.lblChange.Name = "lblChange";
             this.lblChange.Size = new System.Drawing.Size(0, 21);
             this.lblChange.TabIndex = 22;
@@ -356,7 +360,7 @@
             // 
             this.lblTotal.AutoSize = true;
             this.lblTotal.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTotal.Location = new System.Drawing.Point(220, 61);
+            this.lblTotal.Location = new System.Drawing.Point(220, 53);
             this.lblTotal.Name = "lblTotal";
             this.lblTotal.Size = new System.Drawing.Size(0, 21);
             this.lblTotal.TabIndex = 21;
@@ -384,7 +388,7 @@
             this.lbl_cash.AutoSize = true;
             this.lbl_cash.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.lbl_cash.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.lbl_cash.Location = new System.Drawing.Point(3, 83);
+            this.lbl_cash.Location = new System.Drawing.Point(3, 78);
             this.lbl_cash.Name = "lbl_cash";
             this.lbl_cash.Size = new System.Drawing.Size(47, 21);
             this.lbl_cash.TabIndex = 18;
@@ -395,9 +399,9 @@
             this.btnCheckout.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.btnCheckout.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.btnCheckout.ForeColor = System.Drawing.SystemColors.Window;
-            this.btnCheckout.Location = new System.Drawing.Point(370, 45);
+            this.btnCheckout.Location = new System.Drawing.Point(331, 30);
             this.btnCheckout.Name = "btnCheckout";
-            this.btnCheckout.Size = new System.Drawing.Size(179, 55);
+            this.btnCheckout.Size = new System.Drawing.Size(179, 43);
             this.btnCheckout.TabIndex = 17;
             this.btnCheckout.Text = "CHECKOUT";
             this.btnCheckout.UseVisualStyleBackColor = false;
@@ -405,7 +409,7 @@
             // 
             // txtCash
             // 
-            this.txtCash.Location = new System.Drawing.Point(181, 86);
+            this.txtCash.Location = new System.Drawing.Point(181, 81);
             this.txtCash.Name = "txtCash";
             this.txtCash.Size = new System.Drawing.Size(100, 20);
             this.txtCash.TabIndex = 11;
@@ -415,7 +419,7 @@
             this.lbl_change.AutoSize = true;
             this.lbl_change.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.lbl_change.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.lbl_change.Location = new System.Drawing.Point(3, 117);
+            this.lbl_change.Location = new System.Drawing.Point(3, 149);
             this.lbl_change.Name = "lbl_change";
             this.lbl_change.Size = new System.Drawing.Size(66, 21);
             this.lbl_change.TabIndex = 10;
@@ -427,7 +431,7 @@
             this.lbl_total.BackColor = System.Drawing.SystemColors.Window;
             this.lbl_total.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_total.ForeColor = System.Drawing.Color.Red;
-            this.lbl_total.Location = new System.Drawing.Point(4, 62);
+            this.lbl_total.Location = new System.Drawing.Point(4, 53);
             this.lbl_total.Name = "lbl_total";
             this.lbl_total.Size = new System.Drawing.Size(60, 21);
             this.lbl_total.TabIndex = 9;
@@ -639,6 +643,32 @@
             this.btnRemove.UseVisualStyleBackColor = false;
             this.btnRemove.Click += new System.EventHandler(this.btnRemove_Click);
             // 
+            // printDocReceipt
+            // 
+            this.printDocReceipt.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.printDocReceipt_PrintPage);
+            // 
+            // printPreviewReceipt
+            // 
+            this.printPreviewReceipt.UseEXDialog = true;
+            // 
+            // lbltopup
+            // 
+            this.lbltopup.AutoSize = true;
+            this.lbltopup.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.lbltopup.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.lbltopup.Location = new System.Drawing.Point(3, 111);
+            this.lbltopup.Name = "lbltopup";
+            this.lbltopup.Size = new System.Drawing.Size(61, 21);
+            this.lbltopup.TabIndex = 23;
+            this.lbltopup.Text = "Top Up:";
+            // 
+            // txtTopUp
+            // 
+            this.txtTopUp.Location = new System.Drawing.Point(181, 114);
+            this.txtTopUp.Name = "txtTopUp";
+            this.txtTopUp.Size = new System.Drawing.Size(100, 20);
+            this.txtTopUp.TabIndex = 24;
+            // 
             // btnPrint
             // 
             this.btnPrint.BackColor = System.Drawing.Color.DarkOrange;
@@ -651,14 +681,6 @@
             this.btnPrint.Text = "PRINT RECEIPT";
             this.btnPrint.UseVisualStyleBackColor = false;
             this.btnPrint.Click += new System.EventHandler(this.btnPrint_Click);
-            // 
-            // printDocReceipt
-            // 
-            this.printDocReceipt.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.printDocReceipt_PrintPage);
-            // 
-            // printPreviewReceipt
-            // 
-            this.printPreviewReceipt.UseEXDialog = true;
             // 
             // FormMain
             // 
@@ -754,12 +776,14 @@
         private System.Windows.Forms.Button btnSlides;
         private System.Windows.Forms.Button btnSandwiches;
         private System.Windows.Forms.Button btnRemove;
-        private System.Windows.Forms.Button btnPrint;
         private System.Drawing.Printing.PrintDocument printDocReceipt;
         private System.Windows.Forms.PrintDialog printPreviewReceipt;
         private System.Windows.Forms.Label lblBalance;
         private System.Windows.Forms.Label lblUsername;
         private System.Windows.Forms.Button btnTopUp;
+        private System.Windows.Forms.TextBox txtTopUp;
+        private System.Windows.Forms.Label lbltopup;
+        private System.Windows.Forms.Button btnPrint;
     }
 }
 

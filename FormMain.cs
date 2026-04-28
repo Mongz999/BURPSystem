@@ -255,28 +255,44 @@ namespace BURPSystem
         {
             double amount;
 
-            if (!double.TryParse(txtCash.Text, out amount))
+            // VALIDATION
+            if (!double.TryParse(txtTopUp.Text, out amount) || amount <= 0)
             {
-                MessageBox.Show("Enter amount in Cash box!");
+                MessageBox.Show("Enter a valid amount!");
+                txtTopUp.Focus();
                 return;
             }
 
-            userBalance += amount;
-            lblBalance.Text = "₱ " + userBalance.ToString("0.00");
+            try
+            {
+                // ADD TO BALANCE
+                userBalance += amount;
 
-            ConnectDB();
-            conn.Open();
+                // UPDATE LABEL
+                lblBalance.Text = "₱ " + userBalance.ToString("0.00");
 
-            OleDbCommand cmd = new OleDbCommand(
-                "UPDATE Users SET Balance=? WHERE Username=?", conn);
+                // SAVE TO DATABASE
+                ConnectDB();
+                conn.Open();
 
-            cmd.Parameters.AddWithValue("?", userBalance);
-            cmd.Parameters.AddWithValue("?", currentUser);
-            cmd.ExecuteNonQuery();
+                OleDbCommand cmd = new OleDbCommand(
+                    "UPDATE Users SET Balance=? WHERE Username=?", conn);
 
-            conn.Close();
+                cmd.Parameters.AddWithValue("?", userBalance);
+                cmd.Parameters.AddWithValue("?", currentUser);
 
-            MessageBox.Show("Top-up successful!");
+                cmd.ExecuteNonQuery();
+                conn.Close();
+
+                MessageBox.Show("Top-up successful!");
+
+                // CLEAR INPUT
+                txtTopUp.Clear();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void LoadProfile()
