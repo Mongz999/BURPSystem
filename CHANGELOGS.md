@@ -2,6 +2,10 @@ BURP System – Changelog
 
 
 
+\---
+
+
+
 April 21, 2026
 
 
@@ -100,6 +104,8 @@ April 27, 2026
 
 \* Simplified login to user-only (Panis)
 
+\* Initial commit to GitHub (Renejane)
+
 
 
 \---
@@ -114,7 +120,7 @@ April 28, 2026
 
 \* Changed the top-up method (since last time we temporarily used the cash textbox instead of making a separate text box so that the users can top-up) (Renejane)
 
-\* Renamed all control names (Renejane) 
+\* Renamed all control names (Renejane)
 
 
 
@@ -131,6 +137,4 @@ April 29, 2026
 \* Displayed history using DataGridView (Panis)
 
 \* Improved UI design and change the size of the main form (Sevilla)
-
-
 
