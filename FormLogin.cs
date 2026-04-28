@@ -13,6 +13,7 @@ namespace BURPSystem
 {
     public partial class FormLogin : Form
     {
+        //DB CONNECTION
         OleDbConnection conn = new OleDbConnection(
         @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=|DataDirectory|\CanteenDB.accdb");
 
@@ -53,9 +54,9 @@ namespace BURPSystem
             {
                 conn.Open();
 
-                // 🔹 CHECK USERS FIRST (with balance)
+                // CHECK USERS FIRST
                 OleDbCommand cmd = new OleDbCommand(
-                    "SELECT * FROM Users WHERE Username=? AND Password=?", conn);
+                    "SELECT * FROM Users WHERE Username=? AND [Password]=?", conn);
 
                 cmd.Parameters.AddWithValue("?", txtUsername.Text);
                 cmd.Parameters.AddWithValue("?", txtPassword.Text);
@@ -76,34 +77,10 @@ namespace BURPSystem
                 }
                 else
                 {
-                    // 🔹 IF NOT USER → CHECK ADMIN
-                    OleDbCommand cmdAdmin = new OleDbCommand(
-                        "SELECT * FROM Admin WHERE Username=? AND Password=?", conn);
-
-                    cmdAdmin.Parameters.AddWithValue("?", txtUsername.Text);
-                    cmdAdmin.Parameters.AddWithValue("?", txtPassword.Text);
-
-                    OleDbDataReader drAdmin = cmdAdmin.ExecuteReader();
-
-                    if (drAdmin.Read())
-                    {
-                        FormMain main = new FormMain(
-                            drAdmin["Username"].ToString(),
-                            "Administrator",
-                            0
-                        );
-
-                        main.Show();
-                        this.Hide();
-                    }
-                    else
-                    {
                         MessageBox.Show("Invalid Username or Password!");
                         txtPassword.Clear();
                         txtPassword.Focus();
                     }
-                }
-
                 conn.Close();
             }
             catch (Exception ex)
