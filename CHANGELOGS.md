@@ -138,3 +138,14 @@ April 29, 2026
 
 \* Improved UI design and change the size of the main form (Sevilla)
 
+
+
+\---
+
+May 2, 2026
+
+\* Added log out for users (Panis)
+\* Added prompts (add to cart, remove item, top up, checkout, upload photo, and transaction history) (Taba)
+\* Improved UI design (mainly on the app size and also the size of each DataGridView) (Taba)
+
+
