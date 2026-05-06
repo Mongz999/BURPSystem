@@ -698,7 +698,7 @@
             // 
             // btnHistory
             // 
-            this.btnHistory.BackColor = System.Drawing.Color.Crimson;
+            this.btnHistory.BackColor = System.Drawing.Color.SlateGray;
             this.btnHistory.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnHistory.ForeColor = System.Drawing.SystemColors.Window;
             this.btnHistory.Location = new System.Drawing.Point(4, 3);
