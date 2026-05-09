@@ -80,9 +80,10 @@
             this.printDocReceipt = new System.Drawing.Printing.PrintDocument();
             this.printPreviewReceipt = new System.Windows.Forms.PrintDialog();
             this.btnPrint = new System.Windows.Forms.Button();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.paneltranshist = new System.Windows.Forms.Panel();
             this.btnHistory = new System.Windows.Forms.Button();
             this.dgvHistory = new System.Windows.Forms.DataGridView();
+            this.btnLogout = new System.Windows.Forms.Button();
             this.paneltop.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picProfile)).BeginInit();
             this.panelMenu.SuspendLayout();
@@ -94,7 +95,7 @@
             this.panelqcatbtns.SuspendLayout();
             this.panelqty.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtQty)).BeginInit();
-            this.panel1.SuspendLayout();
+            this.paneltranshist.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvHistory)).BeginInit();
             this.SuspendLayout();
             // 
@@ -112,6 +113,7 @@
             // paneltop
             // 
             this.paneltop.BackColor = System.Drawing.Color.Indigo;
+            this.paneltop.Controls.Add(this.btnLogout);
             this.paneltop.Controls.Add(this.lblBalance);
             this.paneltop.Controls.Add(this.lblUsername);
             this.paneltop.Controls.Add(this.lblFullName);
@@ -157,12 +159,13 @@
             // btnUpload
             // 
             this.btnUpload.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUpload.Location = new System.Drawing.Point(1227, 26);
+            this.btnUpload.Location = new System.Drawing.Point(1227, 12);
             this.btnUpload.Name = "btnUpload";
             this.btnUpload.Size = new System.Drawing.Size(118, 29);
             this.btnUpload.TabIndex = 4;
             this.btnUpload.Text = "Upload Photo";
             this.btnUpload.UseVisualStyleBackColor = true;
+            this.btnUpload.Click += new System.EventHandler(this.btnUpload_Click);
             // 
             // picProfile
             // 
@@ -686,15 +689,15 @@
             this.btnPrint.UseVisualStyleBackColor = false;
             this.btnPrint.Click += new System.EventHandler(this.btnPrint_Click);
             // 
-            // panel1
+            // paneltranshist
             // 
-            this.panel1.BackColor = System.Drawing.Color.Indigo;
-            this.panel1.Controls.Add(this.btnHistory);
-            this.panel1.Controls.Add(this.dgvHistory);
-            this.panel1.Location = new System.Drawing.Point(12, 762);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(590, 287);
-            this.panel1.TabIndex = 20;
+            this.paneltranshist.BackColor = System.Drawing.Color.Indigo;
+            this.paneltranshist.Controls.Add(this.btnHistory);
+            this.paneltranshist.Controls.Add(this.dgvHistory);
+            this.paneltranshist.Location = new System.Drawing.Point(12, 762);
+            this.paneltranshist.Name = "paneltranshist";
+            this.paneltranshist.Size = new System.Drawing.Size(590, 287);
+            this.paneltranshist.TabIndex = 20;
             // 
             // btnHistory
             // 
@@ -723,13 +726,24 @@
             this.dgvHistory.TabIndex = 21;
             this.dgvHistory.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvHistory_CellContentClick);
             // 
+            // btnLogout
+            // 
+            this.btnLogout.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.btnLogout.Location = new System.Drawing.Point(1227, 46);
+            this.btnLogout.Name = "btnLogout";
+            this.btnLogout.Size = new System.Drawing.Size(118, 29);
+            this.btnLogout.TabIndex = 21;
+            this.btnLogout.Text = "Log out";
+            this.btnLogout.UseVisualStyleBackColor = true;
+            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
+            // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.ClientSize = new System.Drawing.Size(1371, 1061);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.paneltranshist);
             this.Controls.Add(this.btnPrint);
             this.Controls.Add(this.btnRemove);
             this.Controls.Add(this.btnAdd);
@@ -767,7 +781,7 @@
             this.panelqty.ResumeLayout(false);
             this.panelqty.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtQty)).EndInit();
-            this.panel1.ResumeLayout(false);
+            this.paneltranshist.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvHistory)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -828,9 +842,10 @@
         private System.Windows.Forms.TextBox txtTopUp;
         private System.Windows.Forms.Label lbltopup;
         private System.Windows.Forms.Button btnPrint;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel paneltranshist;
         private System.Windows.Forms.DataGridView dgvHistory;
         private System.Windows.Forms.Button btnHistory;
+        private System.Windows.Forms.Button btnLogout;
     }
 }
 

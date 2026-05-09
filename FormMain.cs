@@ -199,13 +199,30 @@ namespace BURPSystem
 
         private void btnRemove_Click(object sender, EventArgs e)
         {
-            if (dgvCart.CurrentRow != null)
+            if (dgvCart.CurrentRow != null &&
+        !dgvCart.CurrentRow.IsNewRow)
             {
-                double value = Convert.ToDouble(dgvCart.CurrentRow.Cells[3].Value);
-                subtotal -= value;
+                DialogResult result = MessageBox.Show(
+                    "Are you sure you want to remove this item?",
+                    "Remove Item",
+                    MessageBoxButtons.YesNo,
+                    MessageBoxIcon.Question);
 
-                dgvCart.Rows.Remove(dgvCart.CurrentRow);
-                UpdateTotals();
+                if (result == DialogResult.Yes)
+                {
+                    double value = Convert.ToDouble(
+                        dgvCart.CurrentRow.Cells[3].Value);
+
+                    subtotal -= value;
+
+                    dgvCart.Rows.Remove(dgvCart.CurrentRow);
+
+                    UpdateTotals();
+                }
+            }
+            else
+            {
+                MessageBox.Show("Select an item first!");
             }
         }
 
@@ -217,66 +234,110 @@ namespace BURPSystem
                 return;
             }
 
+            double cash;
+
+            // VALIDATE CASH INPUT
+            if (!double.TryParse(txtCash.Text, out cash))
+            {
+                MessageBox.Show("Enter valid cash amount!");
+                txtCash.Focus();
+                return;
+            }
+
+            // CHECK IF CASH IS ENOUGH
+            if (cash < total)
+            {
+                MessageBox.Show("Insufficient cash!");
+                return;
+            }
+
+            // COMPUTE CHANGE
+            double change = cash - total;
+
+            // DISPLAY CHANGE
+            lblChange.Text = "₱ " + change.ToString("0.00");
+
+            // CHECK USER BALANCE
             if (userBalance < total)
             {
                 MessageBox.Show("Not enough balance!");
                 return;
             }
 
+            // DEDUCT BALANCE
             userBalance -= total;
             lblBalance.Text = "₱ " + userBalance.ToString("0.00");
 
-            ConnectDB();
-            conn.Open();
-
-            // SAVE ORDER
-            OleDbCommand cmd = new OleDbCommand(
-                  "INSERT INTO Orders (TotalAmount, DateOrdered, Username) VALUES (?, ?, ?)", conn);
-
-            cmd.Parameters.Add("?", OleDbType.Double).Value = total;
-            cmd.Parameters.Add("?", OleDbType.Date).Value = DateTime.Now;
-            cmd.Parameters.Add("?", OleDbType.VarChar).Value = currentUser;
-
-            cmd.ExecuteNonQuery();
-
-            // UPDATE BALANCE
-            OleDbCommand update = new OleDbCommand(
-                "UPDATE Users SET Balance=? WHERE Username=?", conn);
-
-            update.Parameters.AddWithValue("?", userBalance);
-            update.Parameters.AddWithValue("?", currentUser);
-            update.ExecuteNonQuery();
-
-            conn.Close();
-
-            MessageBox.Show("Transaction Complete!");
-
-            txtReceipt.Clear();
-
-            txtReceipt.AppendText("====== BURP RECEIPT ======\r\n");
-            txtReceipt.AppendText("Date: " + DateTime.Now.ToString() + "\r\n\r\n");
-
-            // ITEMS
-            foreach (DataGridViewRow row in dgvCart.Rows)
+            try
             {
-                if (row.Cells[0].Value != null)
+                ConnectDB();
+                conn.Open();
+
+                // SAVE ORDER
+                OleDbCommand cmd = new OleDbCommand(
+                    "INSERT INTO Orders (TotalAmount, DateOrdered, Username) VALUES (?, ?, ?)", conn);
+
+                cmd.Parameters.Add("?", OleDbType.Double).Value = total;
+                cmd.Parameters.Add("?", OleDbType.Date).Value = DateTime.Now;
+                cmd.Parameters.Add("?", OleDbType.VarChar).Value = currentUser;
+
+                cmd.ExecuteNonQuery();
+
+                // UPDATE BALANCE
+                OleDbCommand update = new OleDbCommand(
+                    "UPDATE Users SET Balance=? WHERE Username=?", conn);
+
+                update.Parameters.AddWithValue("?", userBalance);
+                update.Parameters.AddWithValue("?", currentUser);
+
+                update.ExecuteNonQuery();
+
+                conn.Close();
+
+                MessageBox.Show("Transaction Complete!");
+
+                txtReceipt.Clear();
+
+                txtReceipt.AppendText("====== BURP RECEIPT ======\r\n");
+                txtReceipt.AppendText("Date: " + DateTime.Now.ToString() + "\r\n\r\n");
+
+                foreach (DataGridViewRow row in dgvCart.Rows)
                 {
-                    txtReceipt.AppendText(
-                        row.Cells[0].Value.ToString() + " x" +
-                        row.Cells[2].Value.ToString() +
-                        " = ₱" + row.Cells[3].Value.ToString() + "\r\n"
-                    );
+                    if (row.Cells[0].Value != null)
+                    {
+                        txtReceipt.AppendText(
+                            row.Cells[0].Value.ToString() + " x" +
+                            row.Cells[2].Value.ToString() +
+                            " = ₱" + row.Cells[3].Value.ToString() + "\r\n"
+                        );
+                    }
                 }
+
+                txtReceipt.AppendText("\r\n--------------------------\r\n");
+                txtReceipt.AppendText("Subtotal: " + lblSubtotal.Text + "\r\n");
+                txtReceipt.AppendText("VAT (12%): " + lblvat.Text + "\r\n");
+                txtReceipt.AppendText("TOTAL: " + lblTotal.Text + "\r\n");
+                txtReceipt.AppendText("Cash: ₱ " + cash.ToString("0.00") + "\r\n");
+                txtReceipt.AppendText("Change: ₱ " + change.ToString("0.00") + "\r\n\r\n");
+
+                txtReceipt.AppendText("Remaining Balance: ₱ " + userBalance.ToString("0.00") + "\r\n");
+                txtReceipt.AppendText("\r\nThank you!\r\n");
+
+                // CLEAR CART
+                dgvCart.Rows.Clear();
+
+                subtotal = 0;
+                vat = 0;
+                total = 0;
+
+                UpdateTotals();
+
+                txtCash.Clear();
             }
-
-            // TOTALS
-            txtReceipt.AppendText("\r\n--------------------------\r\n");
-            txtReceipt.AppendText("Subtotal: " + lblSubtotal.Text + "\r\n");
-            txtReceipt.AppendText("VAT (12%): " + lblvat.Text + "\r\n");
-            txtReceipt.AppendText("TOTAL: " + lblTotal.Text + "\r\n\r\n");
-
-            txtReceipt.AppendText("Remaining Balance: ₱ " + userBalance.ToString("0.00") + "\r\n");
-            txtReceipt.AppendText("\r\nThank you!\r\n");
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void btnTopUp_Click(object sender, EventArgs e)
@@ -325,45 +386,72 @@ namespace BURPSystem
 
         private void LoadProfile()
         {
-            ConnectDB();
-            conn.Open();
-
-            OleDbCommand cmd = new OleDbCommand(
-                "SELECT ProfilePic FROM Users WHERE Username=?", conn);
-
-            cmd.Parameters.AddWithValue("?", currentUser);
-
-            object result = cmd.ExecuteScalar();
-
-            if (result != null && result.ToString() != "")
+            try
             {
-                picProfile.Image = Image.FromFile(result.ToString());
-            }
+                ConnectDB();
+                conn.Open();
 
-            conn.Close();
+                OleDbCommand cmd = new OleDbCommand(
+                    "SELECT ProfilePic FROM Users WHERE Username=?", conn);
+
+                cmd.Parameters.AddWithValue("?", currentUser);
+
+                object result = cmd.ExecuteScalar();
+
+                if (result != null)
+                {
+                    string path = result.ToString();
+
+                    // CHECK IF FILE EXISTS
+                    if (System.IO.File.Exists(path))
+                    {
+                        picProfile.Image = new Bitmap(path);
+                    }
+                }
+
+                conn.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void btnUpload_Click(object sender, EventArgs e)
         {
             OpenFileDialog op = new OpenFileDialog();
-            op.Filter = "Image Files|*.jpg;*.png";
+
+            op.Filter = "Image Files|*.jpg;*.jpeg;*.png";
 
             if (op.ShowDialog() == DialogResult.OK)
             {
-                string path = op.FileName;
-                picProfile.Image = Image.FromFile(path);
+                try
+                {
+                    string imagePath = op.FileName;
 
-                ConnectDB();
-                conn.Open();
+                    // DISPLAY IMAGE
+                    picProfile.Image = new Bitmap(imagePath);
 
-                OleDbCommand cmd = new OleDbCommand(
-                    "UPDATE Users SET ProfilePic=? WHERE Username=?", conn);
+                    // SAVE PATH TO DATABASE
+                    ConnectDB();
+                    conn.Open();
 
-                cmd.Parameters.AddWithValue("?", path);
-                cmd.Parameters.AddWithValue("?", currentUser);
+                    OleDbCommand cmd = new OleDbCommand(
+                        "UPDATE Users SET ProfilePic=? WHERE Username=?", conn);
 
-                cmd.ExecuteNonQuery();
-                conn.Close();
+                    cmd.Parameters.AddWithValue("?", imagePath);
+                    cmd.Parameters.AddWithValue("?", currentUser);
+
+                    cmd.ExecuteNonQuery();
+
+                    conn.Close();
+
+                    MessageBox.Show("Profile photo updated!");
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
             }
         }
 
@@ -446,6 +534,14 @@ namespace BURPSystem
         private void dgvHistory_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void btnLogout_Click(object sender, EventArgs e)
+        {
+            FormLogin login = new FormLogin();
+            login.Show();
+
+            this.Close();
         }
     }
 }

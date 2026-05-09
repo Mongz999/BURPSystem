@@ -28,49 +28,67 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.gpright = new System.Windows.Forms.GroupBox();
+            this.gprreg = new System.Windows.Forms.GroupBox();
+            this.txtBalance = new System.Windows.Forms.TextBox();
+            this.txtFullName = new System.Windows.Forms.TextBox();
             this.btnBack = new System.Windows.Forms.Button();
             this.chkShowPass = new System.Windows.Forms.CheckBox();
             this.btnRegister = new System.Windows.Forms.Button();
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.txtUsername = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.txtFullName = new System.Windows.Forms.TextBox();
-            this.txtBalance = new System.Windows.Forms.TextBox();
-            this.groupBox1.SuspendLayout();
-            this.groupBox2.SuspendLayout();
-            this.groupBox3.SuspendLayout();
+            this.lblreg = new System.Windows.Forms.Label();
+            this.gpleft = new System.Windows.Forms.GroupBox();
+            this.lblqoute = new System.Windows.Forms.Label();
+            this.lblburp = new System.Windows.Forms.Label();
+            this.gpright.SuspendLayout();
+            this.gprreg.SuspendLayout();
+            this.gpleft.SuspendLayout();
             this.SuspendLayout();
             // 
-            // groupBox1
+            // gpright
             // 
-            this.groupBox1.BackColor = System.Drawing.SystemColors.Window;
-            this.groupBox1.Controls.Add(this.groupBox2);
-            this.groupBox1.Location = new System.Drawing.Point(443, -6);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(472, 732);
-            this.groupBox1.TabIndex = 3;
-            this.groupBox1.TabStop = false;
+            this.gpright.BackColor = System.Drawing.SystemColors.Window;
+            this.gpright.Controls.Add(this.gprreg);
+            this.gpright.Location = new System.Drawing.Point(443, -6);
+            this.gpright.Name = "gpright";
+            this.gpright.Size = new System.Drawing.Size(472, 732);
+            this.gpright.TabIndex = 3;
+            this.gpright.TabStop = false;
             // 
-            // groupBox2
+            // gprreg
             // 
-            this.groupBox2.Controls.Add(this.txtBalance);
-            this.groupBox2.Controls.Add(this.txtFullName);
-            this.groupBox2.Controls.Add(this.btnBack);
-            this.groupBox2.Controls.Add(this.chkShowPass);
-            this.groupBox2.Controls.Add(this.btnRegister);
-            this.groupBox2.Controls.Add(this.txtPassword);
-            this.groupBox2.Controls.Add(this.txtUsername);
-            this.groupBox2.Controls.Add(this.label3);
-            this.groupBox2.Location = new System.Drawing.Point(49, 129);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(397, 481);
-            this.groupBox2.TabIndex = 0;
-            this.groupBox2.TabStop = false;
+            this.gprreg.Controls.Add(this.txtBalance);
+            this.gprreg.Controls.Add(this.txtFullName);
+            this.gprreg.Controls.Add(this.btnBack);
+            this.gprreg.Controls.Add(this.chkShowPass);
+            this.gprreg.Controls.Add(this.btnRegister);
+            this.gprreg.Controls.Add(this.txtPassword);
+            this.gprreg.Controls.Add(this.txtUsername);
+            this.gprreg.Controls.Add(this.lblreg);
+            this.gprreg.Location = new System.Drawing.Point(49, 129);
+            this.gprreg.Name = "gprreg";
+            this.gprreg.Size = new System.Drawing.Size(397, 481);
+            this.gprreg.TabIndex = 0;
+            this.gprreg.TabStop = false;
+            // 
+            // txtBalance
+            // 
+            this.txtBalance.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.txtBalance.Location = new System.Drawing.Point(27, 286);
+            this.txtBalance.Name = "txtBalance";
+            this.txtBalance.Size = new System.Drawing.Size(339, 30);
+            this.txtBalance.TabIndex = 8;
+            this.txtBalance.Text = "Balance";
+            // 
+            // txtFullName
+            // 
+            this.txtFullName.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.txtFullName.Location = new System.Drawing.Point(27, 124);
+            this.txtFullName.Name = "txtFullName";
+            this.txtFullName.Size = new System.Drawing.Size(339, 30);
+            this.txtFullName.TabIndex = 7;
+            this.txtFullName.Text = "Full Name";
             // 
             // btnBack
             // 
@@ -130,102 +148,84 @@
             this.txtUsername.TabIndex = 2;
             this.txtUsername.Text = "Username";
             // 
-            // label3
+            // lblreg
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Bold);
-            this.label3.ForeColor = System.Drawing.Color.Indigo;
-            this.label3.Location = new System.Drawing.Point(150, 45);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(123, 37);
-            this.label3.TabIndex = 0;
-            this.label3.Text = "Register";
+            this.lblreg.AutoSize = true;
+            this.lblreg.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Bold);
+            this.lblreg.ForeColor = System.Drawing.Color.Indigo;
+            this.lblreg.Location = new System.Drawing.Point(150, 45);
+            this.lblreg.Name = "lblreg";
+            this.lblreg.Size = new System.Drawing.Size(123, 37);
+            this.lblreg.TabIndex = 0;
+            this.lblreg.Text = "Register";
             // 
-            // groupBox3
+            // gpleft
             // 
-            this.groupBox3.BackColor = System.Drawing.Color.Indigo;
-            this.groupBox3.Controls.Add(this.label2);
-            this.groupBox3.Controls.Add(this.label1);
-            this.groupBox3.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.groupBox3.Location = new System.Drawing.Point(-1, -6);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(445, 732);
-            this.groupBox3.TabIndex = 4;
-            this.groupBox3.TabStop = false;
+            this.gpleft.BackColor = System.Drawing.Color.Indigo;
+            this.gpleft.Controls.Add(this.lblqoute);
+            this.gpleft.Controls.Add(this.lblburp);
+            this.gpleft.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.gpleft.Location = new System.Drawing.Point(-1, -6);
+            this.gpleft.Name = "gpleft";
+            this.gpleft.Size = new System.Drawing.Size(445, 732);
+            this.gpleft.TabIndex = 4;
+            this.gpleft.TabStop = false;
             // 
-            // label1
+            // lblqoute
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 72F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Yellow;
-            this.label1.Location = new System.Drawing.Point(58, 241);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(339, 128);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "BURP!";
+            this.lblqoute.AutoSize = true;
+            this.lblqoute.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Italic);
+            this.lblqoute.ForeColor = System.Drawing.SystemColors.Window;
+            this.lblqoute.Location = new System.Drawing.Point(112, 410);
+            this.lblqoute.Name = "lblqoute";
+            this.lblqoute.Size = new System.Drawing.Size(226, 28);
+            this.lblqoute.TabIndex = 2;
+            this.lblqoute.Text = "Good Food, Good Mood!";
             // 
-            // label2
+            // lblburp
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Italic);
-            this.label2.ForeColor = System.Drawing.SystemColors.Window;
-            this.label2.Location = new System.Drawing.Point(112, 410);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(226, 28);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Good Food, Good Mood!";
-            // 
-            // txtFullName
-            // 
-            this.txtFullName.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.txtFullName.Location = new System.Drawing.Point(27, 124);
-            this.txtFullName.Name = "txtFullName";
-            this.txtFullName.Size = new System.Drawing.Size(339, 30);
-            this.txtFullName.TabIndex = 7;
-            this.txtFullName.Text = "Full Name";
-            // 
-            // txtBalance
-            // 
-            this.txtBalance.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.txtBalance.Location = new System.Drawing.Point(27, 286);
-            this.txtBalance.Name = "txtBalance";
-            this.txtBalance.Size = new System.Drawing.Size(339, 30);
-            this.txtBalance.TabIndex = 8;
-            this.txtBalance.Text = "Balance";
+            this.lblburp.AutoSize = true;
+            this.lblburp.Font = new System.Drawing.Font("Segoe UI", 72F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblburp.ForeColor = System.Drawing.Color.Yellow;
+            this.lblburp.Location = new System.Drawing.Point(58, 241);
+            this.lblburp.Name = "lblburp";
+            this.lblburp.Size = new System.Drawing.Size(339, 128);
+            this.lblburp.TabIndex = 1;
+            this.lblburp.Text = "BURP!";
             // 
             // FormRegister
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(914, 721);
-            this.Controls.Add(this.groupBox3);
-            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.gpleft);
+            this.Controls.Add(this.gpright);
             this.MaximizeBox = false;
             this.Name = "FormRegister";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormRegister";
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
-            this.groupBox3.ResumeLayout(false);
-            this.groupBox3.PerformLayout();
+            this.gpright.ResumeLayout(false);
+            this.gprreg.ResumeLayout(false);
+            this.gprreg.PerformLayout();
+            this.gpleft.ResumeLayout(false);
+            this.gpleft.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.GroupBox gpright;
+        private System.Windows.Forms.GroupBox gprreg;
         private System.Windows.Forms.Button btnBack;
         private System.Windows.Forms.CheckBox chkShowPass;
         private System.Windows.Forms.Button btnRegister;
         private System.Windows.Forms.TextBox txtPassword;
         private System.Windows.Forms.TextBox txtUsername;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblreg;
+        private System.Windows.Forms.GroupBox gpleft;
+        private System.Windows.Forms.Label lblburp;
+        private System.Windows.Forms.Label lblqoute;
         private System.Windows.Forms.TextBox txtBalance;
         private System.Windows.Forms.TextBox txtFullName;
     }
