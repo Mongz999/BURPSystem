@@ -30,6 +30,7 @@
         {
             this.lblBurp = new System.Windows.Forms.Label();
             this.paneltop = new System.Windows.Forms.Panel();
+            this.btnLogout = new System.Windows.Forms.Button();
             this.lblBalance = new System.Windows.Forms.Label();
             this.lblUsername = new System.Windows.Forms.Label();
             this.lblFullName = new System.Windows.Forms.Label();
@@ -83,7 +84,6 @@
             this.paneltranshist = new System.Windows.Forms.Panel();
             this.btnHistory = new System.Windows.Forms.Button();
             this.dgvHistory = new System.Windows.Forms.DataGridView();
-            this.btnLogout = new System.Windows.Forms.Button();
             this.paneltop.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picProfile)).BeginInit();
             this.panelMenu.SuspendLayout();
@@ -125,6 +125,17 @@
             this.paneltop.Name = "paneltop";
             this.paneltop.Size = new System.Drawing.Size(1371, 80);
             this.paneltop.TabIndex = 2;
+            // 
+            // btnLogout
+            // 
+            this.btnLogout.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.btnLogout.Location = new System.Drawing.Point(1227, 46);
+            this.btnLogout.Name = "btnLogout";
+            this.btnLogout.Size = new System.Drawing.Size(118, 29);
+            this.btnLogout.TabIndex = 21;
+            this.btnLogout.Text = "Log out";
+            this.btnLogout.UseVisualStyleBackColor = true;
+            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
             // 
             // lblBalance
             // 
@@ -696,7 +707,7 @@
             this.paneltranshist.Controls.Add(this.dgvHistory);
             this.paneltranshist.Location = new System.Drawing.Point(12, 762);
             this.paneltranshist.Name = "paneltranshist";
-            this.paneltranshist.Size = new System.Drawing.Size(590, 287);
+            this.paneltranshist.Size = new System.Drawing.Size(590, 206);
             this.paneltranshist.TabIndex = 20;
             // 
             // btnHistory
@@ -722,27 +733,15 @@
             this.dgvHistory.Location = new System.Drawing.Point(0, 36);
             this.dgvHistory.Name = "dgvHistory";
             this.dgvHistory.ReadOnly = true;
-            this.dgvHistory.Size = new System.Drawing.Size(590, 251);
+            this.dgvHistory.Size = new System.Drawing.Size(590, 170);
             this.dgvHistory.TabIndex = 21;
-            this.dgvHistory.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvHistory_CellContentClick);
-            // 
-            // btnLogout
-            // 
-            this.btnLogout.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.btnLogout.Location = new System.Drawing.Point(1227, 46);
-            this.btnLogout.Name = "btnLogout";
-            this.btnLogout.Size = new System.Drawing.Size(118, 29);
-            this.btnLogout.TabIndex = 21;
-            this.btnLogout.Text = "Log out";
-            this.btnLogout.UseVisualStyleBackColor = true;
-            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
             // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.ClientSize = new System.Drawing.Size(1371, 1061);
+            this.ClientSize = new System.Drawing.Size(1371, 976);
             this.Controls.Add(this.paneltranshist);
             this.Controls.Add(this.btnPrint);
             this.Controls.Add(this.btnRemove);
