@@ -308,6 +308,7 @@
             this.dgvCart.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvCart.Location = new System.Drawing.Point(0, 36);
             this.dgvCart.Name = "dgvCart";
+            this.dgvCart.ReadOnly = true;
             this.dgvCart.Size = new System.Drawing.Size(590, 251);
             this.dgvCart.TabIndex = 16;
             // 
@@ -327,6 +328,7 @@
             this.txtReceipt.Location = new System.Drawing.Point(0, 31);
             this.txtReceipt.Multiline = true;
             this.txtReceipt.Name = "txtReceipt";
+            this.txtReceipt.ReadOnly = true;
             this.txtReceipt.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.txtReceipt.Size = new System.Drawing.Size(590, 300);
             this.txtReceipt.TabIndex = 17;

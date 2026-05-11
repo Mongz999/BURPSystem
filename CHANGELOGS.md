@@ -22,7 +22,7 @@ April 22, 2026
 
 \* Added product display (Renejane)
 
-\* Implemented search and category filter (Renejane)
+\* Implemented search and category filter (Sevilla)
 
 \* Added cart (Add \& Remove items) (Renejane)
 
